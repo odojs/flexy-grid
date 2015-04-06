@@ -1,2 +1,2 @@
-# flexy-grid
+# Flexy Grid
 Flexbox grid css

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NEXT GEN</title>
+    <link rel="stylesheet" href="flexy-grid.min.css" />
+    <style>
+      .grid > * {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Basic grids</h3>
+
+    <p>The grid cells below do not specify any widths, they just naturally space themselves equally and expand to fit the entire row. They're also equal height by default.</p>
+
+    <div class="grid">
+      <div>1/2</div>
+      <div>1/2</div>
+    </div>
+
+    <div class="grid">
+      <div>1/3</div>
+      <div>1/3</div>
+      <div>1/3</div>
+    </div>
+
+    <div class="grid">
+      <div>1/4</div>
+      <div>1/4</div>
+      <div>1/4</div>
+      <div>1/4</div>
+    </div>
+
+    <div class="grid">
+      <div>
+        Full-height, even when my content doesn't fill the space.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.
+      </div>
+    </div>
+
+    <h3>Individual Sizing</h3>
+
+    <p>When equal widths aren't what you want, you can add sizing classes to individual cells. Cells without sizing classes simply divide up the remaining space as normal.</p>
+
+    <p>The cells below labeled "auto" do not have sizing classes specified.</p>
+
+    <div class="grid">
+      <div class="cell--half">1/2</div>
+      <div>auto</div>
+      <div>auto</div>
+    </div>
+
+    <div class="grid">
+      <div>auto</div>
+      <div class="cell--third">1/3</div>
+    </div>
+
+    <div class="grid">
+      <div class="cell--quarter">1/4</div>
+      <div>auto</div>
+      <div class="cell--third">1/3</div>
+    </div>
+
+    <h3>Responsive</h3>
+
+    <p>Responsive grids work by adding media classes to the grid cells or containers. When those media values are met, the grids automatically adjust accordingly.</p>
+
+    <p>The cells below should be full width by default and scaled to fit above <code>48em</code>. Resize your browser to see them in action.</p>
+
+    <div class="grid grid--full grid-large--fit">
+      <div>Full / Halves</div>
+      <div>Full / Halves</div>
+    </div>
+    <div class="grid grid--full grid-large--fit">
+      <div>Full / Thirds</div>
+      <div>Full / Thirds</div>
+      <div>Full / Thirds</div>
+    </div>
+
+    <h3>Grid-ception</h3>
+
+    <p>Grid components are infinitely nestable inside of other grid components.</p>
+
+    <div class="grid grid--flex">
+      <div class="grid">
+        <div class="grid--third">
+          <div>1/3</div>
+        </div>
+        <div class="grid">
+          <div>1/2</div>
+          <div>1/2</div>
+        </div>
+      </div>
+      <div class="grid-third">1/3</div>
+    </div>
+
+    <h2>Alignment Features</h2>
+
+    <h3>Top-aligned grid Cells</h3>
+
+    <div class="grid grid--top">
+      <div>
+        This cell should be top-aligned.
+      </div>
+      <div class="cell--half">
+        Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta leo, eu ultricies nunc sollicitudin vitae. Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh.
+      </div>
+      <div>
+        This cell should be top-aligned.
+      </div>
+    </div>
+
+    <h3>Bottom-aligned grid Cells</h3>
+
+    <div class="grid grid--bottom">
+      <div>
+        This cell should be bottom-aligned.
+      </div>
+      <div>
+        Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in.
+      </div>
+      <div>
+        This cell should be bottom-aligned.
+      </div>
+    </div>
+
+    <h3>Vertically Centered grid Cells</h3>
+
+    <div class="grid grid--center">
+      <div>
+        This cell should be vertically-centered with the cell to its right.
+      </div>
+      <div>
+        Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in. Sed est ligula, ornare ac nisi adipiscing, iaculis facilisis tellus. Nullam vel facilisis libero. Duis semper lobortis elit, vitae dictum erat.</div>
+      </div>
+    </div>
+
+
+    <h3>Mixed Vertical Alignment</h3>
+
+    <div class="grid">
+      <div class="cell--top">
+        This cell should be top aligned.
+      </div>
+      <div>
+        Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in. Sed est ligula, ornare ac nisi adipiscing, iaculis facilisis tellus.
+      </div>
+      <div class="cell--center">
+        This cell should be center-aligned.
+      </div>
+      <div class="cell--bottom">
+        This cell should be bottom-aligned.
+      </div>
+    </div>
+  </body>
+</html>
