@@ -11,6 +11,6 @@ gulp.task 'default', ->
     .pipe stylus()
     .pipe rename "flexy-grid.min.css"
     .pipe autoprefixer browsers: ['last 2 versions']
-    .pipe minifycss()
+    .pipe minifycss compatibility: '*,-properties.zeroUnits'
     .pipe sourcemaps.write './'
     .pipe gulp.dest './'
