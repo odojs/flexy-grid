@@ -5,115 +5,102 @@ body, html, .grid
   margin 0
   padding 0
 
+@require "mixin.styl"
+
 .grid
-  display flex
-  flex-wrap wrap
-  list-style none
+  grid()
+  grid--fit()
 
-  > *
-    flex 1
-
-// order
 .grid--columns
-  flex-direction column
+  grid--columns()
 
-// vertical alignment
 .grid--top
-  align-items flex-start
+  grid--top()
 
 .grid--bottom
-  align-items flex-end
+  grid--bottom()
 
 .grid--center
-  align-items center
+  grid--center()
 
-.cell--top
-  align-self flex-start
+.grid--shrink
+  grid--shrink()
 
-.cell--bottom
-  align-self flex-end
+.grid--full
+  grid--full()
 
-.cell--center
-  align-self center
+.grid--half
+  grid--half()
 
-.cell--scroll-x
-  height 100%
-  overflow-x auto
-  -webkit-overflow-scrolling touch
+.grid--third
+  grid--third()
 
-.cell--scroll-y
-  height 100%
-  overflow-y auto
-  -webkit-overflow-scrolling touch
-
-// cell sizing
-.cell--shrink
-  flex 0 1 auto
-
-.cell--full
-  flex 0 0 100%
-
-.cell--half
-  flex 0 0 50%
-
-.cell--third
-  flex 0 0 33.3333%
-
-.cell--quarter
-  flex 0 0 25%
-
-.cell--empty
-  // For IE10 to work, you need to specify a unit for the third flexbox property.
-  // Autoprefixr normally handles this, except for zero units. You also need to tell
-  // minifycss not to compress zero units.
-  flex 0 0 0px
-
-// grid sizing
-.grid--shrink > *
-  flex 0 1 auto
-
-.grid--full > *
-  flex 0 0 100%
-
-.grid--half > *
-  flex 0 0 50%
-
-.grid--third > *
-  flex 0 0 33.3333%
-
-.grid--quarter > *
-  flex 0 0 25%
+.grid--quarter
+  grid--quarter()
 
 // small override
 @media (min-width: 24em)
-  .grid-small--fit > *
-    flex 1
+  .grid-small--fit
+    grid--fit()
 
-  .grid-small--full > *
-    flex 0 0 100%
+  .grid-small--full
+    grid--full()
 
-  .grid-small--half > *
-    flex 0 0 50%
+  .grid-small--half
+    grid--half()
 
-  .grid-small--third > *
-    flex 0 0 33.3333%
+  .grid-small--third
+    grid--third()
 
-  .grid-small--quarter > *
-    flex 0 0 25%
+  .grid-small--quarter
+    grid-quarter()
 
 // large override
 @media (min-width: 48em)
-  .grid-large--fit > *
-    flex 1
+  .grid-large--fit
+    grid--fit()
 
-  .grid-large--full > *
-    flex 0 0 100%
+  .grid-large--full
+    grid--full()
 
-  .grid-large--half > *
-    flex 0 0 50%
+  .grid-large--half
+    grid--half()
 
-  .grid-large--third > *
-    flex 0 0 33.3333%
+  .grid-large--third
+    grid--third()
 
-  .grid-large--quarter > *
-    flex 0 0 25%
+  .grid-large--quarter
+    grid-quarter()
+
+.cell--top
+  cell--top()
+
+.cell--bottom
+  cell--bottom()
+
+.cell--center
+  cell--center()
+
+.cell--scroll-x
+  cell--scroll-x()
+
+.cell--scroll-y
+  cell--scroll-y()
+
+.cell--shrink
+  cell--shrink()
+
+.cell--full
+  cell--full()
+
+.cell--half
+  cell--half()
+
+.cell--third
+  cell--third()
+
+.cell--quarter
+  cell--quarter()
+
+.cell--empty
+  cell--empty()
