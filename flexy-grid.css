@@ -89,6 +89,9 @@ html,
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+.cell--fit {
+  flex: 1;
+}
 .cell--shrink {
   flex: 0 1 auto;
 }
